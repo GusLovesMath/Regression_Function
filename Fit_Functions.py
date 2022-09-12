@@ -136,8 +136,8 @@ def poly_fit( xdata , ydata, n=1, pc='k--', dc='bo', title=None, ylab='f(x)', xl
         pl.show()
         
         
-        for i in range( n + 1 ):
-            print(f'Parameter {i} = {params[i]} +/- {params_error[i]}')
+        for i, p in enumerate( params ):
+            print(f'Parameter {i} = {p} +/- {params_error[i]}')
             
 
         if p_cov is True:
