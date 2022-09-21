@@ -128,7 +128,7 @@ def poly_fit(
         print_func = np.poly1d(params)
 
         x = np.arange(min(xdata), max(xdata) + 0.01, 0.01)
-        y_func = np.polyval(params, x)                                             # creats usable function from expression
+        y_func = np.polyval(params, x)                                  # creats usable function from expression
 
         if p_func:
             print(f'Poly Fit: {print_func}')
@@ -137,7 +137,7 @@ def poly_fit(
         #pl.plot(xdata, ydata, dc, label='Data Points')                # Plots Data points
         pl.errorbar(xdata, ydata, yerr, xerr, ms=dps, fmt=dc, ecolor=elc,
                     elinewidth=elw, capsize=cs, label='Data Points')
-        pl.plot(x, y_func, pc, label='Fitted Function')               # Plots fitted function
+        pl.plot(x, y_func, pc, label='Fitted Function')                # Plots fitted function
 
         if title is None:
             pl.title(rf'f(x) = {print_func}')
