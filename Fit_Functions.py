@@ -17,7 +17,7 @@ def fit_function(
     params_error = np.sqrt(np.diag(covariance_matrix))
 
     # returns parameters
-    if param_return is True:
+    if param_return:
         return params, params_error
 
     # plots fitted function, with data points and error bars
@@ -84,7 +84,7 @@ def fit_function(
                 Latex(f'Parameter {n_list[i]} = {params[i]} $\pm$ {params_error[i]}'))
 
         # Chi Calculation
-        if chi_show is True:
+        if chi_show:
 
             # Chi Squared chi^2
             yfit = fit_graph_terms(xdata, func, params)
@@ -102,10 +102,11 @@ def fit_function(
             display(Latex(f'$\chi_R^2$: Reduced Chi-Squared: {red_chi2}'))
 
         # Display Covarience Matrix
-        if cov_show is True:
+        if cov_show:
             from sympy import Matrix
             print('\nCovariance Matrix:')
             display(Matrix(covariance_matrix))
+
 
 
 '''Fits Function based on a general polynomial degree'''
