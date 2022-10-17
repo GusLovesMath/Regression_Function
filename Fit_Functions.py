@@ -2,6 +2,7 @@ import matplotlib.pyplot as pl
 import numpy as np
 from scipy.optimize import curve_fit
 
+
 '''Fits Function based on a inputted function'''
 def fit_function(
         xdata, ydata, func, n=3, yerr=None, xerr=None, p0=None,
